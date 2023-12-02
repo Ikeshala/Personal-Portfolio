@@ -494,9 +494,69 @@ span {
     width: 35%;
 }
 
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .1rem;
+    padding-bottom: .6rem;
+
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: .3rem;
+    text-align: center;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.project-img {
+    position: relative;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img img {
+    width: 100%;
+    border-radius: 5%;
+    border: .2rem solid var(--main-color);
+}
+
+.project-content {
+    text-align: center;
+}
+
+.project-content h3 {
+    font-size: 2.6rem;
+}
+
+.project-content p {
+    font-size: 1.6rem;
+    margin: .2rem 0 .3rem;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+    margin-top: 2rem;
+}
+
+.btn-box.btns a::before {
+    background: var(--second-bg-color);
+}
+
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
+    background: var(--second-bg-color);
 }
 
 .contact form {
@@ -528,6 +588,7 @@ span {
     background: transparent;
     border-radius: .6rem;
     border: .2rem solid var(--main-color);
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .contact form .input-box .input-field input::placeholder,
@@ -535,13 +596,20 @@ span {
     color: var(--text-color);
 }
 
+.contact form .input-box .input-field input:focus,
+.contact form .textarea-field textarea:focus {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    outline: none;
+}
+
 .contact form .focus {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
+    top: 50%;
+    left: 50%;
+    width: 100%;
     height: 100%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .6rem;
     z-index: -1;
     transition: .5s;
